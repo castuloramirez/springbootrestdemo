@@ -1,6 +1,6 @@
-# spring boot rest demo
+# Spring Boot Rest Demo
 
-Readme
+
 1)	Running the app
 
 springbootrestdemo> mvn clean install -U    
