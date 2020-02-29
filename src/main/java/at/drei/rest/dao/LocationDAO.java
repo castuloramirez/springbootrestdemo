@@ -8,8 +8,10 @@ import at.drei.rest.util.StringHelper;
 import org.springframework.stereotype.Repository;
 
 import java.awt.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 import static at.drei.rest.util.Type.premium;
@@ -31,13 +33,39 @@ public class LocationDAO {
     }
 
     /**
-     * Full Search
+     * By Point
+     *
+     * @param p1
+     * @param p2
+     * @return
+     */
+    private static List<Location> getLocationByPoint(String p1, String p2) {
+        Point point1 = StringHelper.getPoint(p1);
+        Point point2 = StringHelper.getPoint(p2);
+        Rectangle rect = new Rectangle(point1);
+        rect.add(point2);
+
+        List<Location> listOrder = list.getLocationList();
+        List<Location> newListOrder = new ArrayList<Location>();
+        for (Location location : listOrder) {
+            String p3 = location.getLat() + "," + location.getLng();
+            Point point3 = StringHelper.getPoint(p3);
+            boolean bln = rect.contains(point3);
+            if (bln) {
+                newListOrder.add(new Location(location.getId(), location.getName(), location.getLat(), location.getLng(), location.getType()));
+            }
+        }
+        return newListOrder;
+    }
+
+    /**
+     * Full Search, First the Premium ones.
      *
      * @return
      */
     public Locations getAllLocations() {
         List<Location> listOrder = list.getLocationList();
-        listOrder.sort(Comparator.comparing(Location::getId));
+        listOrder.sort(Comparator.comparing(Location::getType));
         list.setLocationList(listOrder);
         return list;
     }
@@ -53,6 +81,7 @@ public class LocationDAO {
 
     /**
      * Get locations by different criterias.
+     *
      * @param sl
      * @return
      */
@@ -68,31 +97,31 @@ public class LocationDAO {
             return search;
 
         } else if (sl.getP1() != null && sl.getP2() != null) {
-            List<Location> result = getLocationByPoint(sl.getP1(),sl.getP2());
+            List<Location> result = getLocationByPoint(sl.getP1(), sl.getP2());
             search.setLocationList(result);
-            if(sl.getType()!=null){
+            if (sl.getType() != null) {
                 List<Location> result2 = listOrder.stream()
                         .filter(a -> Objects.equals(a.getType(), sl.getType()))
                         .collect(Collectors.toList());
-               // search.getLocationList().addAll(result2);
-               // search.getLocationList().sort(Comparator.comparing(Location::getType));
+                // search.getLocationList().addAll(result2);
+                // search.getLocationList().sort(Comparator.comparing(Location::getType));
 
                 List<Location> newList = new ArrayList<Location>(result);
                 newList.addAll(result2);
                 search.setLocationList(newList);
 
-                if(sl.getLimit()!=null){
+                if (sl.getLimit() != null) {
                     int limit = Integer.valueOf(sl.getLimit());
                     List<Location> listOrderLimit = newList;//search.getLocationList();
                     List<Location> newListOrder = new ArrayList<Location>();
-                    int i =0;
+                    int i = 0;
                     for (Location location : listOrderLimit) {
-                        if(i < limit) {
+                        if (i < limit) {
                             newListOrder.add(new Location(location.getId(), location.getName(), location.getLat(), location.getLng(), location.getType()));
                             i++;
                         }
                     }
-                    if(i>0){
+                    if (i > 0) {
                         search.setLocationList(newListOrder);
                         search.getLocationList().sort(Comparator.comparing(Location::getType));
                         return search;
@@ -106,30 +135,5 @@ public class LocationDAO {
         listOrder.sort(Comparator.comparing(Location::getType));
         search.setLocationList(listOrder);
         return search;
-    }
-
-    /**
-     * By Point
-     * @param p1
-     * @param p2
-     * @return
-     */
-    private static List<Location> getLocationByPoint(String p1, String p2) {
-        Point point1 = StringHelper.getPoint(p1);
-        Point point2 = StringHelper.getPoint(p2);
-        Rectangle rect= new Rectangle(point1);
-        rect.add(point2);
-
-        List<Location> listOrder = list.getLocationList();
-        List<Location> newListOrder = new ArrayList<Location>();
-        for (Location location : listOrder) {
-            String p3 = location.getLat() + "," +location.getLng();
-            Point point3 = StringHelper.getPoint(p3);
-            boolean bln = rect.contains(point3);
-            if(bln){
-                newListOrder.add(new Location(location.getId(), location.getName(), location.getLat(), location.getLng(), location.getType()));
-            }
-        }
-        return newListOrder;
     }
 }
