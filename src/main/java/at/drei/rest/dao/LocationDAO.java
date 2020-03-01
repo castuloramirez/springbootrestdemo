@@ -60,6 +60,7 @@ public class LocationDAO {
 
     /**
      * Full Search, First the Premium ones.
+     * Fixed the Bug.
      *
      * @return
      */
@@ -80,60 +81,45 @@ public class LocationDAO {
     }
 
     /**
-     * Get locations by different criterias.
+     * Get locations by different Criterias.
      *
      * @param sl
      * @return
      */
     public Locations getLocationsByCriterias(SearchLocation sl) {
-        List<Location> listOrder = list.getLocationList();
         Locations search = new Locations();
-        //By Type
-        if (sl.getP1() == null || sl.getP2() == null) {
-            List<Location> result = listOrder.stream()
-                    .filter(a -> Objects.equals(a.getType(), sl.getType()))
-                    .collect(Collectors.toList());
-            search.setLocationList(result);
-            return search;
 
-        } else if (sl.getP1() != null && sl.getP2() != null) {
+        if (sl.getP1() != null && sl.getP2() != null) {//By Point
             List<Location> result = getLocationByPoint(sl.getP1(), sl.getP2());
             search.setLocationList(result);
+
             if (sl.getType() != null) {
-                List<Location> result2 = listOrder.stream()
-                        .filter(a -> Objects.equals(a.getType(), sl.getType()))
-                        .collect(Collectors.toList());
-                // search.getLocationList().addAll(result2);
-                // search.getLocationList().sort(Comparator.comparing(Location::getType));
+                search = getListByType(sl, search.getLocationList());
 
-                List<Location> newList = new ArrayList<Location>(result);
-                newList.addAll(result2);
-                search.setLocationList(newList);
 
-                if (sl.getLimit() != null) {
-                    int limit = Integer.valueOf(sl.getLimit());
-                    List<Location> listOrderLimit = newList;//search.getLocationList();
-                    List<Location> newListOrder = new ArrayList<Location>();
-                    int i = 0;
-                    for (Location location : listOrderLimit) {
-                        if (i < limit) {
-                            newListOrder.add(new Location(location.getId(), location.getName(), location.getLat(), location.getLng(), location.getType()));
-                            i++;
-                        }
-                    }
-                    if (i > 0) {
-                        search.setLocationList(newListOrder);
-                        search.getLocationList().sort(Comparator.comparing(Location::getType));
-                        return search;
-                    }
-                }
             }
             search.getLocationList().sort(Comparator.comparing(Location::getType));
             return search;
+        } else if (sl.getType() != null) {   //By Type
+            return getListByType(sl, list.getLocationList());
         }
 
-        listOrder.sort(Comparator.comparing(Location::getType));
-        search.setLocationList(listOrder);
+        search.getLocationList().sort(Comparator.comparing(Location::getType));
+        return search;
+    }
+
+    /**
+     * Search the locations by Type : premium or standard
+     *
+     * @param sl
+     * @return
+     */
+    private Locations getListByType(SearchLocation sl, List<Location> listOrder) {
+        Locations search = new Locations();
+        List<Location> result = listOrder.stream()
+                .filter(a -> Objects.equals(a.getType(), sl.getType()))
+                .collect(Collectors.toList());
+        search.setLocationList(result);
         return search;
     }
 }
