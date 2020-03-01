@@ -67,6 +67,8 @@ public class LocationDAO {
     public Locations getAllLocations() {
         List<Location> listOrder = list.getLocationList();
         listOrder.sort(Comparator.comparing(Location::getType));
+        //   List<Location> limit  = listOrder.subList(0,2);
+        //  list.setLocationList(limit);
         list.setLocationList(listOrder);
         return list;
     }
@@ -88,22 +90,29 @@ public class LocationDAO {
      */
     public Locations getLocationsByCriterias(SearchLocation sl) {
         Locations search = new Locations();
-
+        //Searching
         if (sl.getP1() != null && sl.getP2() != null) {//By Point
             List<Location> result = getLocationByPoint(sl.getP1(), sl.getP2());
             search.setLocationList(result);
 
-            if (sl.getType() != null) {
-                search = getListByType(sl, search.getLocationList());
-
-
+            if (sl.getType() == null) {//Just by Points
+                search.getLocationList().sort(Comparator.comparing(Location::getType));
+                return search;
             }
+
+            search = getListByType(sl, search.getLocationList()); //Points and Type
+            if (sl.getLimit() != null) {//Points and Type and Limit
+                int ilimit = new Integer(sl.getLimit());
+                List<Location> limit = search.getLocationList().subList(0, ilimit);
+                search.setLocationList(limit);
+                return search;
+            }
+
             search.getLocationList().sort(Comparator.comparing(Location::getType));
             return search;
         } else if (sl.getType() != null) {   //By Type
             return getListByType(sl, list.getLocationList());
         }
-
         search.getLocationList().sort(Comparator.comparing(Location::getType));
         return search;
     }
