@@ -5,14 +5,14 @@ public enum Type {
     premium(1), standard(2);
 
     // internal state
-    private int tp;
+    private int priority;
 
     // constructor
-    private Type(final int t) {
-        this.tp = t;
+    Type(final int t) {
+        this.priority = t;
     }
 
-    public int getTp() {
-        return tp;
+    public int getPriority() {
+        return priority;
     }
 }

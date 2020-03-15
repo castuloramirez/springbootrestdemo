@@ -11,7 +11,6 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Objects;
 import java.util.stream.Collectors;
 
 import static at.drei.rest.util.Type.premium;
@@ -27,9 +26,9 @@ public class LocationDAO {
      * Initial data
      */
     static {
-        list.getLocationList().add(new Location(1, "Bratislava", "48.14", "17.10", standard.name()));
-        list.getLocationList().add(new Location(2, "Fancy Place", "48.2", "15.6", premium.name()));
-        list.getLocationList().add(new Location(3, "Berlin", "52.52", "13.40", standard.name()));
+        list.getLocationList().add(new Location(1, "Bratislava", "48.14", "17.10", standard));
+        list.getLocationList().add(new Location(2, "Fancy Place", "48.2", "15.6", premium));
+        list.getLocationList().add(new Location(3, "Berlin", "52.52", "13.40", standard));
     }
 
     /**
@@ -66,7 +65,7 @@ public class LocationDAO {
      */
     public Locations getAllLocations() {
         List<Location> listOrder = list.getLocationList();
-        listOrder.sort(Comparator.comparing(Location::getType));
+        listOrder.sort(Comparator.comparing(a -> a.getType().getPriority()));
         //   List<Location> limit  = listOrder.subList(0,2);
         //  list.setLocationList(limit);
         list.setLocationList(listOrder);
@@ -126,9 +125,14 @@ public class LocationDAO {
     private Locations getListByType(SearchLocation sl, List<Location> listOrder) {
         Locations search = new Locations();
         List<Location> result = listOrder.stream()
-                .filter(a -> Objects.equals(a.getType(), sl.getType()))
+                .filter(a -> a.getType() == sl.getType())
                 .collect(Collectors.toList());
         search.setLocationList(result);
         return search;
+    }
+
+    private boolean isEqualType(Location p, Location q) {
+
+        return p.getType() == q.getType();
     }
 }

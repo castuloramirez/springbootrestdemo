@@ -1,23 +1,35 @@
 package at.drei.rest.model;
 
+import at.drei.rest.util.Type;
+
 public class Location {
 
     private Integer id;
     private String name;
     private String lat;
     private String lng;
-    private String type;
+    private Type type;
 
     public Location() {
     }
 
-    public Location(Integer id, String name, String lat, String lng, String type) {
+    public Location(Integer id, String name, String lat, String lng, Type type) {
         this.id = id;
         this.name = name;
         this.lat = lat;
         this.lng = lng;
         this.type = type;
     }
+
+
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
+    }
+
 
     public Integer getId() {
         return id;
@@ -51,14 +63,6 @@ public class Location {
         this.lng = lng;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
     @Override
     public String toString() {
         return "Location{" +
@@ -66,7 +70,7 @@ public class Location {
                 ", name='" + name + '\'' +
                 ", lat='" + lat + '\'' +
                 ", lng='" + lng + '\'' +
-                ", type='" + type + '\'' +
+                ", type='" + type.name() + '\'' +
                 '}';
     }
 }

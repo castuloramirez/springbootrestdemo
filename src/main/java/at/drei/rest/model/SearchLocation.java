@@ -1,12 +1,14 @@
 package at.drei.rest.model;
 
+import at.drei.rest.util.Type;
+
 public class SearchLocation {
     private String p1;
     private String p2;
-    private String type;
+    private Type type;
     private String limit;
 
-    public SearchLocation(String p1, String p2, String type, String limit) {
+    public SearchLocation(String p1, String p2, Type type, String limit) {
         this.p1 = p1;
         this.p2 = p2;
         this.type = type;
@@ -32,11 +34,11 @@ public class SearchLocation {
         this.p2 = p2;
     }
 
-    public String getType() {
+    public Type getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(Type type) {
         this.type = type;
     }
 
