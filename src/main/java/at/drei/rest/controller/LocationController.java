@@ -32,11 +32,9 @@ public class LocationController {
         return location;
     }
 
-
     @PostMapping(path = "/search", consumes = "application/json", produces = "application/json")
     public Locations getLocationsByParameters(@RequestBody SearchLocation searchLocation) {
         System.out.println("+++++++++++++++++" + searchLocation.toString());
         return locationDAO.getLocationsByCriterias(searchLocation);
     }
-
 }

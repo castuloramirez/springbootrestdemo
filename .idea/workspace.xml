@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0cc6f1db-6d3c-4157-aa34-04130235a923" name="Default Changelist" comment="" />
+    <list default="true" id="0cc6f1db-6d3c-4157-aa34-04130235a923" name="Default Changelist" comment="Full Search order by Premium ones. Deleted the comparing(Location::getId).">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/drei/rest/controller/LocationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/drei/rest/controller/LocationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/drei/rest/dao/LocationDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/drei/rest/dao/LocationDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/drei/rest/model/Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/drei/rest/model/Location.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/drei/rest/model/SearchLocation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/drei/rest/model/SearchLocation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/drei/rest/util/Type.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/drei/rest/util/Type.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springbootdemo-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/springbootdemo-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springbootdemo-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/springbootdemo-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-at.drei.demo.SpringBootDemoApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/at.drei.demo.SpringBootDemoApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/at/drei/demo/SpringBootDemoApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/at/drei/demo/SpringBootDemoApplicationTests.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,22 +27,49 @@
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="Arquillian JUnit Test Class" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="1c16dbcb6cc3979dedc48047dd02667a5b7819e2" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1XtpU1uA0popFxsYOqgQ1DHzswY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/at/drei/rest/model" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="at.drei.rest.util" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="at.drei.rest.dao" />
     </key>
@@ -35,7 +77,7 @@
       <recent name="C:\Test16022020\springbootrestdemo\src\main\java\at\drei\rest\model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LocationDAO">
+  <component name="RunManager" selected="JUnit.StringHelperTest">
     <configuration name="LocationDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="at.drei.rest.dao.LocationDAO" />
       <module name="springbootdemo" />
@@ -49,6 +91,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StringHelperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springbootdemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="at.drei.rest.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="at.drei.rest.util" />
+      <option name="MAIN_CLASS_NAME" value="at.drei.rest.util.StringHelperTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootDemoApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springbootdemo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="at.drei.rest.SpringBootDemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpringBootDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="springbootdemo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.howtodoinjava.rest.SpringBootDemoApplication" />
@@ -58,6 +122,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StringHelperTest" />
         <item itemvalue="Application.LocationDAO" />
       </list>
     </recent_temporary>
@@ -72,42 +137,165 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581875256172</updated>
-      <workItem from="1581875259169" duration="30531000" />
+      <workItem from="1581875259169" duration="31844000" />
+      <workItem from="1582964064630" duration="2272000" />
+      <workItem from="1582968692582" duration="31495000" />
+      <workItem from="1583507196588" duration="1825000" />
+      <workItem from="1584085644453" duration="1453000" />
+      <workItem from="1584874130425" duration="9000" />
+      <workItem from="1584874198476" duration="83726000" />
+      <workItem from="1585122944807" duration="615000" />
+      <workItem from="1585125987339" duration="787000" />
+      <workItem from="1585127161451" duration="443000" />
+      <workItem from="1585127626799" duration="344000" />
+      <workItem from="1585127992907" duration="1791000" />
+      <workItem from="1585189616911" duration="315000" />
+      <workItem from="1585189980443" duration="1206000" />
     </task>
+    <task id="LOCAL-00001" summary="Delete System.out.println">
+      <created>1582970806030</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1582970806030</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Full Search order by Premium ones. Deleted the comparing(Location::getId).">
+      <created>1582988833018</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1582988833018</updated>
+    </task>
+    <task id="LOCAL-00003" summary="First Draft of the refactor. 1) Added a new method search by Type.">
+      <created>1583058455486</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583058455486</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Reviewing.">
+      <created>1583085693031</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1583085693031</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Testing adding">
+      <created>1583507803182</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1583507803182</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Delete System.out.println" />
+    <MESSAGE value="Full Search order by Premium ones. Deleted the comparing(Location::getId)." />
+    <MESSAGE value="First Draft of the refactor. 1) Added a new method search by Type." />
+    <MESSAGE value="Reviewing." />
+    <MESSAGE value="Testing adding" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing adding" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="212" key="#com.intellij.ide.util.MemberChooser" timestamp="1581894191418">
+    <state x="765" y="212" key="#com.intellij.ide.util.MemberChooser" timestamp="1583137162164">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="212" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581894191418" />
+    <state x="765" y="212" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1583137162164" />
     <state x="690" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581893989235">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581893989235" />
-    <state width="1877" height="224" key="GridCell.Tab.0.bottom" timestamp="1581910130791">
+    <state x="660" y="134" width="1174" height="804" key="CommitChangelistDialog2" timestamp="1584951419960">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="224" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581910130791" />
-    <state width="1877" height="224" key="GridCell.Tab.0.center" timestamp="1581910130791">
+    <state x="660" y="134" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040/3840.0.1920.1040@0.0.1920.1040" timestamp="1584951419960" />
+    <state x="660" y="134" width="1174" height="804" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584265572256" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1583137031350">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="224" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581910130791" />
-    <state width="1877" height="224" key="GridCell.Tab.0.left" timestamp="1581910130791">
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583137031350" />
+    <state x="4580" y="277" key="FileChooserDialogImpl" timestamp="1585128696906">
+      <screen x="3840" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="277" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040/3840.0.1920.1040@0.0.1920.1040" timestamp="1585057983625" />
+    <state x="4580" y="277" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040/3840.0.1920.1040@3840.0.1920.1040" timestamp="1585128696906" />
+    <state x="740" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582965210900" />
+    <state width="1877" height="223" key="GridCell.Tab.0.bottom" timestamp="1583150497739">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="224" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581910130791" />
-    <state width="1877" height="224" key="GridCell.Tab.0.right" timestamp="1581910130791">
+    <state width="1877" height="223" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040/3840.0.1920.1040@0.0.1920.1040" timestamp="1583150497739" />
+    <state width="1877" height="223" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583141119029" />
+    <state width="1877" height="223" key="GridCell.Tab.0.center" timestamp="1583150497739">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="224" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581910130791" />
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1581911627824">
+    <state width="1877" height="223" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040/3840.0.1920.1040@0.0.1920.1040" timestamp="1583150497739" />
+    <state width="1877" height="223" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583141119029" />
+    <state width="1877" height="223" key="GridCell.Tab.0.left" timestamp="1583150497739">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581911627824" />
+    <state width="1877" height="223" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040/3840.0.1920.1040@0.0.1920.1040" timestamp="1583150497739" />
+    <state width="1877" height="223" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583141119029" />
+    <state width="1877" height="223" key="GridCell.Tab.0.right" timestamp="1583150497739">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="223" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040/3840.0.1920.1040@0.0.1920.1040" timestamp="1583150497739" />
+    <state width="1877" height="223" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583141119029" />
+    <state x="490" y="177" key="Maven.ArtifactSearchDialog" timestamp="1583139441276">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="490" y="177" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583139441276" />
+    <state x="4475" y="239" key="NewModule_or_Project.wizard" timestamp="1585128705598">
+      <screen x="3840" y="0" width="1920" height="1040" />
+    </state>
+    <state x="635" y="239" key="NewModule_or_Project.wizard/0.0.1920.1040/1920.0.1920.1040/3840.0.1920.1040@0.0.1920.1040" timestamp="1585058016077" />
+    <state x="4475" y="239" key="NewModule_or_Project.wizard/0.0.1920.1040/1920.0.1920.1040/3840.0.1920.1040@3840.0.1920.1040" timestamp="1585128705598" />
+    <state x="733" y="233" key="RollbackChangesDialog" timestamp="1583131604524">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="733" y="233" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583131604524" />
+    <state x="4303" y="165" key="SettingsEditor" timestamp="1585128982166">
+      <screen x="3840" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2383" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040/3840.0.1920.1040@1920.0.1920.1040" timestamp="1585128475651" />
+    <state x="4303" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040/3840.0.1920.1040@3840.0.1920.1040" timestamp="1585128982166" />
+    <state x="463" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1582965219059" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1583057556536">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583057556536" />
+    <state x="2587" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1585127744279">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040/3840.0.1920.1040@0.0.1920.1040" timestamp="1584951362753" />
+    <state x="2587" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040/3840.0.1920.1040@1920.0.1920.1040" timestamp="1585127744279" />
+    <state x="667" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584265454034" />
+    <state x="2607" y="489" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1585128444208">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2607" y="489" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040/1920.0.1920.1040/3840.0.1920.1040@1920.0.1920.1040" timestamp="1585128444208" />
+    <state x="731" y="239" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1583139354562">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="731" y="239" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583139354562" />
     <state x="667" y="154" width="585" height="732" key="find.popup" timestamp="1581895058948">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -116,5 +304,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581907472704" />
+    <state x="682" y="437" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1582984880091">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="682" y="437" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582984880091" />
   </component>
 </project>
