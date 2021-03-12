@@ -24,7 +24,7 @@ jobs:
       #uses: github/codeql-action/init@v1
       uses: test-org43834/codeql-action/init@search-for-bundle
       with:
-        config-file: ./.github/codeql/codeql-config.yml
+       # config-file: ./.github/codeql/codeql-config.yml
         languages: ${{ matrix.language }}
         
     - name: Set up JDK 8
@@ -34,8 +34,8 @@ jobs:
 
     # Autobuild attempts to build any compiled languages in this case Java
     - name: Autobuild
-      uses: github/codeql-action/autobuild@v1
-
+      #uses: github/codeql-action/autobuild@v1
+      uses : test-org43834/codeql-action/autobuild@search-for-bundle   
 
 
     #- run: |
@@ -43,4 +43,5 @@ jobs:
     #   make release
 
     - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v
+      #uses: github/codeql-action/analyze@v
+      uses: test-org43834/codeql-action/analyze@search-for-bundle
