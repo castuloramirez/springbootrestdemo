@@ -21,7 +21,8 @@ jobs:
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
-      uses: github/codeql-action/init@v1
+      #uses: github/codeql-action/init@v1
+      uses: test-org43834/codeql-action/init@search-for-bundle
       with:
         config-file: ./.github/codeql/codeql-config.yml
         languages: ${{ matrix.language }}
