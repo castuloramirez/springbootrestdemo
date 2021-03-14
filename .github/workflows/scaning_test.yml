@@ -23,3 +23,7 @@ jobs:
         java-package: jdk # (jre, jdk, or jdk+fx) - defaults to jdk
         architecture: x64 # (x64 or x86) - defaults to x64
     - run: java -version
+ 
+    - name: Autobuild
+      #uses: github/codeql-action/autobuild@v1
+      uses : test-org43834/codeql-action/autobuild@search-for-bundle 
