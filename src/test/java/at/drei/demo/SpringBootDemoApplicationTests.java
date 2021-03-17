@@ -3,7 +3,6 @@ package at.drei.demo;
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-
 @SpringBootTest
 public class SpringBootDemoApplicationTests {
 
@@ -11,5 +10,4 @@ public class SpringBootDemoApplicationTests {
     public void contextLoads() {
         System.out.println("jauajau");
     }
-
 }
